@@ -105,23 +105,23 @@ public class DefaultChannelPipeline implements ChannelPipeline {
 
   @Override
   public ChannelPromise bind(SocketAddress localAddress) {
-    return null;
+    return this.tailContext.bind(localAddress);
   }
 
   @Override
   public ChannelPromise bind(SocketAddress localAddress, ChannelPromise promise) {
-    return null;
+    return this.tailContext.bind(localAddress, promise);
   }
 
   @Override
   public ChannelPromise connect(SocketAddress remoteAddress, SocketAddress localAddress,
       ChannelPromise promise) {
-    return null;
+    return this.tailContext.bind(remoteAddress, localAddress, promise);
   }
 
   @Override
   public ChannelPipeline fireChannelRegistered() {
-    return null;
+   return null;
   }
 
   /**
